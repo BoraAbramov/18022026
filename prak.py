@@ -48,7 +48,7 @@ print(f"\n🦸 Actors in Marvel Cinematic Universe: {actors_mcu}")
 
 print(f"\n🦇 Actors in DC Extended Universe: {actors_dceu}")
 
-print(f"\n🎭 Actors in superhero movies (any franchise): {actors_superhero}")
+print(f"\n🎭 Actors in superhero movies (any franchise): {actors_superhero | actors_dceu | actors_mcu}")
 
 _both = actors_mcu & actors_dceu
 print(f"\n❓ Are there any actors in BOTH MCU and DCEU? {_both}")
@@ -62,5 +62,5 @@ print(f"\n❓ Is the DCEU set a subset of any superhero actors? {s2}")
 s3 = actors_mcu - actors_superhero - actors_dceu
 print(f"\n❓ Actors ONLY in MCU (not in other franchises)? {s3}")
 
-s4 = actors_superhero == actors_mcu
+s4 = actors_superhero >= actors_mcu
 print(f"\n❓ Is all_superhero_actors a superset of DCEU? {s4}")

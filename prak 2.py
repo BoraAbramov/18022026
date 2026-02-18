@@ -57,7 +57,7 @@ print(f"\n❓ Which languages work for Web but NOT Mobile?{languages_web - langu
 
 print(f"\n❓ Is 'Python' in the web development set?{"Python" in languages_web}")
 
-print(f"\n❓ The ultimate polyglot language (in ALL four categories)?")
+print(f"\n❓ The ultimate polyglot language (in ALL four categories)?{languages_web & languages_data_science & languages_mobile & languages_systems}")
 
 modern_web = {"JavaScript", "TypeScript", "Python"}
 print(f"\n❓ Is modern_web a PROPER subset of web languages (PROPER = smaller, not equal)?{modern_web < languages_web}")
